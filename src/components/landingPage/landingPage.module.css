@@ -1,0 +1,161 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  flex: 1;
+}
+
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  padding: 10rem 0 0 5rem;
+
+  .heading {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .desc {
+    font-size: 1rem;
+    color: var(--navbar-text-color);
+  }
+  .introFooter {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+
+    .icon {
+      background-color: var(--secondary-bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 0.5rem;
+      color: var(--green-color);
+      cursor: pointer;
+    }
+
+    .button {
+      width: 9rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      background-color: var(--green-color);
+      border: none;
+      color: black;
+      font-weight: bold;
+      border-radius: 1rem;
+      cursor: pointer;
+      .ArrowIcon {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.gameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 5rem;
+}
+
+.bg {
+  background: var(--secondary-bg-color);
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  min-height: 500px;
+}
+
+/* For mobile phones and small devices (up to 600px) */
+@media (max-width: 600px) {
+}
+
+/* For tablets and medium devices (up to 768px) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    margin-top: 0.5rem;
+  }
+  .introContainer {
+    padding: 4rem 0 0 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .introContainer {
+    padding: 10rem 0 0 0.5rem;
+
+    .heading {
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+  }
+}
+
+/* For desktops and large screens (above 1200px) */
+@media (min-width: 1200px) {
+  .introContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding: 10rem 0 0 1rem;
+
+    .heading {
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    .desc {
+      font-size: 1rem;
+      color: var(--navbar-text-color);
+    }
+    .introFooter {
+      display: flex;
+      gap: 1rem;
+      margin: 0.5rem 0;
+
+      .icon {
+        background-color: var(--secondary-bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 0.5rem;
+        color: var(--green-color);
+        cursor: pointer;
+      }
+
+      .button {
+        width: 9rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        background-color: var(--green-color);
+        border: none;
+        color: black;
+        font-weight: bold;
+        border-radius: 1rem;
+        cursor: pointer;
+        .ArrowIcon {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
