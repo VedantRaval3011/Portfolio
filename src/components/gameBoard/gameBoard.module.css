@@ -1,0 +1,145 @@
+.gameContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.playground {
+  border: 2px solid var(--green-color);
+  border-radius: 15px;
+}
+.gameContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+  gap: 2rem;
+  height: inherit;
+}
+.gameInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0.3rem;
+  gap: 5px;
+  font-size: 2.5rem;
+  .bottomArrows {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  .arrowButton {
+    color: var(--navbar-text-color);
+    cursor: pointer;
+  }
+}
+
+.gameButton {
+  border: 2px solid var(--green-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: inherit;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+.foodLeft {
+  font-size: 1.5vw;
+  text-align: center;
+  margin-left: 0.3rem;
+}
+
+@media (max-width: 375px) {
+  .gameContainer{
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .gameContainer{
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .arrows {
+    gap: 2px;
+    margin-top: 1rem;
+    font-size: 2.7rem;
+    margin-left: 0;
+  }
+
+  .gameContent {
+    flex-direction: row;
+    align-items: center;
+    margin-left: 0;
+    gap: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .gameInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .gameButton {
+    margin-top: 15px;
+    font-size: 5vw;
+    cursor: pointer;
+  }
+  
+  .foodLeft {
+    font-size: 5vw;
+    text-align: center;
+    margin-left: 0.3rem;
+  }
+}
+
+/* For tablets and medium devices (up to 768px) */
+@media (max-width: 768px) {
+  .gameContainer{
+    padding: 1.5rem;
+  }
+
+  .gameButton {
+    margin-top: 15px;
+    font-size: 4vw;
+    cursor: pointer;
+  }
+  
+  .foodLeft {
+    font-size: 4vw;
+    text-align: center;
+    margin-left: 0.3rem;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .gameContainer{
+    padding: 1.5rem;
+  }
+
+  .gameButton {
+    margin-top: 15px;
+    font-size: 3.5vw;
+    cursor: pointer;
+  }
+  
+  .foodLeft {
+    font-size: 3.5vw;
+    text-align: center;
+    margin-left: 0.3rem;
+  }
+
+ 
+}
+

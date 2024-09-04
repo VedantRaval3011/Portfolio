@@ -1,60 +1,63 @@
+/* Global Styles */
 .container {
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
   flex: 1;
 }
 
 .introContainer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   flex: 1;
-  padding: 10rem 0 0 5rem;
+  justify-content: center;
+  margin-left: 3rem;
+}
 
-  .heading {
-    font-size: 4rem;
-    line-height: 1;
-  }
+.introContainer .heading {
+  font-size: 4.5rem;
+  line-height: 1;
+}
 
-  .desc {
-    font-size: 1rem;
-    color: var(--navbar-text-color);
-  }
-  .introFooter {
-    display: flex;
-    gap: 1rem;
-    margin: 0.5rem 0;
+.introContainer .subHeading{
+  font-size: 1.5rem;
+}
 
-    .icon {
-      background-color: var(--secondary-bg-color);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      padding: 0.5rem;
-      color: var(--green-color);
-      cursor: pointer;
-    }
+.introContainer .desc {
+  font-size: 1rem;
+  color: var(--navbar-text-color);
+}
 
-    .button {
-      width: 9rem;
-      height: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-      background-color: var(--green-color);
-      border: none;
-      color: black;
-      font-weight: bold;
-      border-radius: 1rem;
-      cursor: pointer;
-      .ArrowIcon {
-        text-align: center;
-      }
-    }
-  }
+.introContainer .introFooter {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.introContainer .introFooter .icon {
+  background-color: var(--secondary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--green-color);
+  cursor: pointer;
+}
+
+.introContainer .introFooter .button {
+  width: 9rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  background-color: var(--green-color);
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .gameContainer {
@@ -62,7 +65,7 @@
   align-items: center;
   justify-content: center;
   flex: 1;
-  padding: 5rem;
+  padding: 1rem; /* Reduced padding */
 }
 
 .bg {
@@ -70,92 +73,112 @@
   border-radius: 15px;
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  max-width: 500px;
-  height: 100%;
-  min-height: 500px;
+  padding: 2rem; /* Reduced padding */
+  min-height: 50vh;
 }
 
-/* For mobile phones and small devices (up to 600px) */
-@media (max-width: 600px) {
-}
-
-/* For tablets and medium devices (up to 768px) */
+/* Media Queries */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    margin-top: 0.5rem;
+    margin-top: 0;
   }
+
   .introContainer {
-    padding: 4rem 0 0 0.5rem;
+    padding: 5rem 0 0 0.5rem;
+  }
+
+  .introContainer .heading {
+    font-size: 5rem;
+  }
+
+  .introContainer .subHeading {
+    font-size: 2.5rem;
+  }
+
+  .introContainer .desc {
+    font-size: 1.5rem;
+  }
+
+  .gameContainer {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .bg {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .introContainer {
+    padding: 3rem 0 0 0.5rem;
+    margin-left: 1rem;
+  }
+
+  .introContainer .heading {
+    font-size: 3rem;
+  }
+
+  .gameContainer {
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .bg {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 375px) {
+  .introContainer {
+    padding: 2rem 0 0;
+  }
+
+  .introContainer .heading {
+    font-size: 3rem;
+  }
+
+  .introContainer .subHeading {
+    font-size: 1.5rem;
+  }
+
+  .introContainer .desc {
+    font-size: 1rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .introContainer {
-    padding: 10rem 0 0 0.5rem;
-
-    .heading {
-      font-size: 3.5rem;
-      line-height: 1;
-    }
-  }
-}
-
-/* For desktops and large screens (above 1200px) */
-@media (min-width: 1200px) {
-  .introContainer {
-    display: flex;
+  .container {
     flex-direction: column;
-    gap: 10px;
-    flex: 1;
-    padding: 10rem 0 0 1rem;
+    margin-top: 1rem;
+  }
+  
 
-    .heading {
-      font-size: 4rem;
-      line-height: 1;
-    }
+  .introContainer {
+    padding: 5rem 0 0 0.5rem;
+  }
 
-    .desc {
-      font-size: 1rem;
-      color: var(--navbar-text-color);
-    }
-    .introFooter {
-      display: flex;
-      gap: 1rem;
-      margin: 0.5rem 0;
+  .introContainer .heading {
+    font-size: 5rem;
+  }
 
-      .icon {
-        background-color: var(--secondary-bg-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        padding: 0.5rem;
-        color: var(--green-color);
-        cursor: pointer;
-      }
+  .introContainer .subHeading {
+    font-size: 2.5rem;
+  }
 
-      .button {
-        width: 9rem;
-        height: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.3rem;
-        background-color: var(--green-color);
-        border: none;
-        color: black;
-        font-weight: bold;
-        border-radius: 1rem;
-        cursor: pointer;
-        .ArrowIcon {
-          text-align: center;
-        }
-      }
-    }
+  .introContainer .desc {
+    font-size: 1.5rem;
+  }
+
+  .gameContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+
+  .bg {
+    padding: 7rem; /* Reduced padding */
   }
 }

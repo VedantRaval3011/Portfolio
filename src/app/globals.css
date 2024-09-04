@@ -4,6 +4,9 @@
   --green-color: #d3e97a;
   --navbar-text-color: #c7c7c7;
   --secondary-bg-color: #222222;
+  --page-seperation-border-color: #484848;
+  --title-text: 4rem;
+  --desc-text: 1.3rem;
 }
 
 * {
@@ -30,7 +33,11 @@ a {
 }
 
 .wrapper {
-  padding: 0 3.5rem;
+  padding: 0 3.5rem 0 3.5rem;
 }
 
-
+@media (max-width: 375px) {
+  .wrapper {
+    padding: 0 2rem 0 2rem;
+  }
+}

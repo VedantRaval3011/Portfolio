@@ -1,7 +1,8 @@
 .container {
-  margin-top: 1rem;
+  margin: 1rem 3rem 0 3rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .items {
@@ -56,4 +57,63 @@
 .logo:hover {
   transform: scale(1.1);
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+}
+
+.moreButton {
+  display: none; /* Hidden by default, visible on mobile */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.closeButton {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  backdrop-filter: blur(10px); /* Blurs background */
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.menuItems .item {
+  font-size: 2rem; /* Larger font for mobile */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .items {
+    display: none; /* Hide navbar items on mobile */
+  }
+
+  .moreButton {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem 1rem 0 1rem;
+  }
 }

@@ -4,13 +4,16 @@ import LandingPage from "@/components/landingPage/LandingPage";
 import Projects from "@/components/projects/Projects";
 import AboutMe from "@/components/aboutMe/AboutMe";
 
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <LandingPage/>
-      <Projects/>
-      <AboutMe/>
-    </main>
+    <>
+      <div className={styles.container}>
+        <LandingPage />
+      </div>
+      <div className={styles.projectContainer}>
+        <Projects />
+      </div>
+      <AboutMe />
+    </>
   );
 }
