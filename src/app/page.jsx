@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import LandingPage from "@/components/landingPage/LandingPage";
 import Projects from "@/components/projects/Projects";
 import AboutMe from "@/components/aboutMe/AboutMe";
+import ContactMe from "@/components/contactMe/ContactMe";
 
 export default function Home() {
   return (
@@ -13,7 +14,10 @@ export default function Home() {
       <div className={styles.projectContainer}>
         <Projects />
       </div>
-      <AboutMe />
+      <div className={styles.aboutMeContainer}>
+        <AboutMe />
+      </div>
+      
     </>
   );
 }

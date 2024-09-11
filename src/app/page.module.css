@@ -7,6 +7,11 @@
   border-top: 1px solid var(--page-seperation-border-color);
   display: flex;
   min-height: 100vh;
+  border-bottom: 1px solid var(--page-seperation-border-color);
+}
+
+.aboutMeContainer{
+   border-bottom: 1px solid var(--page-seperation-border-color);
 }
 
 @media(max-width: 375px){

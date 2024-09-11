@@ -3,6 +3,7 @@ import styles from './capabilities.module.css'
 const Capabilities = () => {
   return (
     <div>Capabilities</div>
+    
   )
 }
 
